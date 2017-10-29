@@ -1,11 +1,13 @@
-html{
-	color: #00FF7F !important;
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+height: 85%;
 }
-.h1 {
-	background-color: #00FF7F;
-	height: 100%;
-	width: 100%;
-	background-position: center:
-	background-repeat: no-repeat;
-	background-size: cover:  
+/* Optional: Makes the sample page fill the window. */
+
+html,
+body {
+height: 85%;
+background-color: #00FF7F;
 }
