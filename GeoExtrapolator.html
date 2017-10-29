@@ -1,61 +1,74 @@
 <!DOCTYPE html>
-  <html>
-  <section>
-    <img src="head.png" al
+<html>
+<head>
     <section class="w3-container w3-center">
-      <center><h2 class="w3-wide">GeoExtrapolator</h2></center>
-      <center><p class="w3-opacity"><i>We find your dream location</i></p></center>
+        <center>
+            <h2 class="w3-wide">GeoExtrapolator</h2>
+            <p class="w3-opacity"><i>We find your dream location</i></p>
+        </center>
     </section>
     <section class="w3-container w3-content w3-center">
-      <center><p class="w3-justify">Here are some locations matching your preferences.</p></center>
-    </section>
-    <script src = "script.js"></script>
-      <form>
         <center>
-          <select id="What is your preferred Weather?">
-            <option>Sunny</option>
-            <option>Cloudy</option>
-            <option>Rainy</option>
-            <option>Snowy</option>
-            <option>Cold</option>
-            <option>Humid</option>
-          </select>
-          <select id="What geographic region do you live in?">
-            <option>Plains</option>
-            <option>Valley</option>
-            <option>Mountain</option>
-            <option>Coastal</option>
-            <option>Forest</option>
-            <option>Desert</option>
-          </select>
+            <p class="w3-justify">Here are some locations matching your preferences.</p>
         </center>
-      </form>
-      <form>
-        <input type="button" onclick="getPreferences()" value="Submit">
-      </form>
     </section>
-  <head>
+    <script src="script.js"></script>
+    <div>
+    <h2><center>Please select your preferences from the following options:</center></h2>
+    </div>
+    <form>
+        <center>
+            <select id="What is your preferred Weather?">
+                <option selected="selected">Select a Climate</option>
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+                <option>Cold</option>
+                <option>Humid</option>
+            </select>
+            <select id="What geographic region do you live in?">
+                <option selected="selected">Select a Geography</option>
+                <option>Plains</option>
+                <option>Valley</option>
+                <option>Mountain</option>
+                <option>Coastal</option>
+                <option>Forest</option>
+                <option>Desert</option>
+            </select>
+        </center>
+    </form>
+    <form>
+        <input type="button" onclick="getPreferences()" value="Submit">
+    </form>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="script.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdyuNtAkLyMl--989SXYKDA2bc20QlDVU&callback=initMap"></script>
+</body>
+<div>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>GeoExtrapolator</title>
     <style>
-      /* Always set the map height explicitly to define the size of the div
+        /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 85%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 85%;
-        margin: 1000;
-        padding: 1000;
-      }
+        
+        #map {
+            height: 85%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        
+        html,
+        body {
+            height: 85%;
+            margin: 1000;
+            padding: 1000;
+            background-color: #00FF7F;
+        }
     </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script src = "script.js"></script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdyuNtAkLyMl--989SXYKDA2bc20QlDVU&callback=initMap"></script>
-  </body>
+</div>
+
 </html>

@@ -1,11 +1,11 @@
-html {
-  background;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+html{
+	color: #00FF7F !important;
 }
-.div-inline{
-    
-    display:inline-block;
+.h1 {
+	background-color: #00FF7F;
+	height: 100%;
+	width: 100%;
+	background-position: center:
+	background-repeat: no-repeat;
+	background-size: cover:  
 }
