@@ -14,7 +14,7 @@ font-family: 'Open Sans', sans-serif;
 }
 
 div{
-	color: green;
+	color: black;
 }
 
 .w3-wide {
@@ -24,4 +24,8 @@ div{
 	padding: 10px;
 	display: inline-block;
 
+}
+.w3-opacity{
+	color:black;
+	text-decoration: underline;
 }
