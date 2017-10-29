@@ -74,7 +74,7 @@ function getPreferences() {
             }
         } else if (clim === "Temperate") {
             if(geo === "Valley") {
-                locations = [];
+                locations = 5;
             } else if (geo === "Coastal") {
                 locations = [
                     {lat: 6.524379, lng: 3.379206},
@@ -84,7 +84,7 @@ function getPreferences() {
                     {lat: 37.774929, lng: -122.419416}];
 
             } else if (geo === "Mountainous") {
-                locations = [];
+                locations = 5;
             } else if (geo === "Flatland") {
                 locations = [
                     {lat: 37.566535, lng: 126.977969},
@@ -92,7 +92,7 @@ function getPreferences() {
             }
         } else if (clim === "Cold") {
             if(geo === "Valley") {
-                locations = [];
+                locations = 5;
             } else if (geo === "Coastal") {
                 locations = [
                     {lat: 40.712775, lng: -74.005973},
@@ -101,7 +101,7 @@ function getPreferences() {
             } else if (geo === "Mountainous") {
                 locations = [{lat: 55.755826, lng: 37.617300}];
             } else if (geo === "Flatland") {
-                locations = [];
+                locations = 5;
             }
         }
     } else if (pop === "Suburban") {
@@ -129,7 +129,7 @@ function getPreferences() {
             }
         } else if (clim === "Temperate") {
             if(geo === "Valley") {
-                locations = [];
+                locations = 5;
             } else if (geo === "Coastal") {
                 locations = [
                     {lat: 40.811550, lng: -73.946477},
@@ -157,7 +157,7 @@ function getPreferences() {
             }
         } else if (clim === "Cold") {
             if(geo === "Valley") {
-                locations = [];
+                locations = 5;
             } else if (geo === "Coastal") {
                 locations = [
                     {lat: 52.373030, lng: 4.940774},
@@ -200,7 +200,7 @@ function getPreferences() {
             }
         } else if (clim === "Hot") {
             if(geo === "Valley") {
-                locations = [];
+                locations = 5;
             } else if (geo === "Coastal") {
                 locations = [
                     {lat:35.8412, lng:14.5393},
@@ -238,12 +238,17 @@ function getPreferences() {
                     {lat:-39.272254, lng:-71.977628},
                     {lat:38.641185, lng: -83.744365},
                     {lat:42.416674, lng:-90.429017}];
-
             }
         }
     }
+    if(locations === 5) {
+        alert("Sorry, but weather like that just doesn't exist :(");
+    } else {
+        alert("Please look at the locations below");
+    }
     initMap();
 }
+
 
 
 
