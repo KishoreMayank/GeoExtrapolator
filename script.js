@@ -3,6 +3,20 @@ function getPreferences() {
   document.getElementById("What geographic region do you live in?").submit();
 }
 
+var SanFrancisco = {
+    Climate: "Cloudy",
+    Geography: ["Coastal", "Valley"],
+    Elevation: "Above Sea Level",
+    Population: "Urban"
+};
+
+var cityName = {
+    Climate: ["string1", "string2"],
+    Geography: ["string1", "string2"],
+    Elevation: ["string1", "string2"],
+    Population: ["string1", "string2"]
+};
+
 function initMap() {
 
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -54,42 +68,6 @@ var locations = [
   {lat: -43.999792, lng: 170.463352}
 ]
 
-
-/*
-<body>
-  <script>
-    var getJSON = function(url, callback) {
-
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
-        xhr.responseType = 'json';
-
-        xhr.onload = function() {
-
-            var status = xhr.status;
-
-            if (status == 200) {
-                callback(null, xhr.response);
-            } else {
-                callback(status);
-            }
-        };
-
-        xhr.send();
-    };
-
-    getJSON('http://api.wunderground.com/api/369cc744f82078db/almanac/q/CA/San_Francisco.json',  function(err, data) {
-        if (err != null) {
-            console.error(err);
-        } else {
-            var text = `Date: ${data.date}
-            Time: ${data.time}
-            Unix time: ${data.milliseconds_since_epoch}`
-            console.log(text);
-        }
-    });
-  </script>
-</body>*/
 
 
 
