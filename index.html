@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+    <!-- <div id="container">
+        <input name="box" type="textbox" />
+        <input name="box" type="textbox" />
+        <input name="submit" type="submit" />
+    </div> -->
+    <section class="w3-container w3-center">
+        <center>
+            <h2 class="w3-wide">GeoExtrapolator</h2><br>
+            <p class="w3-opacity"><i><b>We find your dream location<b></i></p>
+        </center>
+    </section>
+    <script src="script.js"></script>
+    <center><div class="a">
+    <p>Please select your preferences from the following options:</p>
+    </div></center>
+    <br>
+    <form>
+        <center>
+            <select id="Q1">
+                <option selected="selected">Select a Climate</option>
+                <option>Hot</option>
+                <option>Temperate</option>
+                <option>Cold</option>
+            </select>
+            <select id="Q2">
+                <option selected="selected">Select a Geography</option>
+                <option>Valley</option>
+                <option>Mountainous</option>
+                <option>Flatland</option>
+                <option>Coastal</option>
+            </select>
+            <select id="Q3">
+                <option selected="selected">Select a Location Type</option>
+                <option>Urban</option>
+                <option>Suburban</option>
+                <option>Rural</option>
+            </select>
+        </center>
+    </form>
+    <form>
+        <br><center><input type="button" onclick="getPreferences()" value="Submit"></center><br>
+    </form>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="script.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdyuNtAkLyMl--989SXYKDA2bc20QlDVU&callback=initMap"></script>
+</body>
+<div>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>GeoExtrapolator</title>
+</div>
+</html>
