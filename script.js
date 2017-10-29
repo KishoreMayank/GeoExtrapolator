@@ -1,7 +1,7 @@
 var clim= "";
 var geo = "";
 var pop = "";
-var locations = [{lat: 0, lng: 0}];
+var locations = [];
 
 
 function initMap() {
@@ -74,7 +74,7 @@ function getPreferences() {
             }
         } else if (clim === "Temperate") {
             if(geo === "Valley") {
-                continue;
+                locations = [];
             } else if (geo === "Coastal") {
                 locations = [
                     {lat: 6.524379, lng: 3.379206},
@@ -84,7 +84,7 @@ function getPreferences() {
                     {lat: 37.774929, lng: -122.419416}];
 
             } else if (geo === "Mountainous") {
-                continue;
+                locations = [];
             } else if (geo === "Flatland") {
                 locations = [
                     {lat: 37.566535, lng: 126.977969},
@@ -92,7 +92,7 @@ function getPreferences() {
             }
         } else if (clim === "Cold") {
             if(geo === "Valley") {
-                continue;
+                locations = [];
             } else if (geo === "Coastal") {
                 locations = [
                     {lat: 40.712775, lng: -74.005973},
@@ -101,7 +101,7 @@ function getPreferences() {
             } else if (geo === "Mountainous") {
                 locations = [{lat: 55.755826, lng: 37.617300}];
             } else if (geo === "Flatland") {
-                continue;
+                locations = [];
             }
         }
     } else if (pop === "Suburban") {
@@ -129,7 +129,7 @@ function getPreferences() {
             }
         } else if (clim === "Temperate") {
             if(geo === "Valley") {
-                continue;
+                locations = [];
             } else if (geo === "Coastal") {
                 locations = [
                     {lat: 40.811550, lng: -73.946477},
@@ -157,7 +157,7 @@ function getPreferences() {
             }
         } else if (clim === "Cold") {
             if(geo === "Valley") {
-                continue;
+                locations = [];
             } else if (geo === "Coastal") {
                 locations = [
                     {lat: 52.373030, lng: 4.940774},
@@ -180,27 +180,27 @@ function getPreferences() {
     } else if (pop === "Rural") {
         if (clim === "Cold") {
             if(geo === "Valley") {
-                Locations = [
+                locations = [
                     {lat: 44.465433, lng: -72.687402},
                     {lat: 43.479929, lng: -110.762428},
                     {lat: 43.680740, lng: -114.363662},
                     {lat: 39.481654, lng: -106.038352}];
             } else if (geo === "Coastal") {
-                Locations = [
+                locations = [
                     {lat: 67.9324, lng: 13.0887},
                     {lat: 41.354266, lng: -71.966462},
                     {lat: 57.053056, lng: 135.330000}];
             } else if (geo === "Mountainous") {
-                Locations = [{lat: -45.031162, lng: 168.662644}];
+                locations = [{lat: -45.031162, lng: 168.662644}];
             } else if (geo === "Flatland") {
-                Locations = [
+                locations = [
                     {lat: 51.758808, lng:-1.830775},
                     {lat: 41.931829, lng: -73.907437},
                     {lat: 43.331691, lat: -83.738019}];
             }
         } else if (clim === "Hot") {
             if(geo === "Valley") {
-                continue;
+                locations = [];
             } else if (geo === "Coastal") {
                 locations = [
                     {lat:35.8412, lng:14.5393},
@@ -211,14 +211,14 @@ function getPreferences() {
             } else if (geo === "Mountainous") {
                 locations = [{lat:34.526147, lng:-83.984395}];
             } else if (geo === "Flatland") {
-                Locations =  [
+                locations =  [
                     {lat:35.895554, lng:-86.997879},
                     {lat:36.709833, lng: -81.977348},
                     {lat:30.309462, lng:-104.020623}];
             }
         } else if (clim === "Temperate") {
             if(geo === "Valley") {
-                Locations = [
+                locations = [
                     {lat:48.0794, lng:7.3585},
                     {lat:46.3683, lng:14.1146},
                     {lat:45.899247, lng:6.129384},
@@ -227,38 +227,20 @@ function getPreferences() {
                     {lat:33.260042, lng:103.918599},
                     {lat:36.256577, lng:136.902736}];
             } else if (geo === "Coastal") {
-                Locations =  [{lat:36.555239, lng:-121.923288}];
+                locations =  [{lat:36.555239, lng:-121.923288}];
             } else if (geo === "Mountainous") {
-                Locations = [
+                locations = [
                     {lat:48.7904, lng:11.4979},
                     {lat:47.5622, lng:13.6493},
                     {lat:40.243128, lng:-79.237532}];
             } else if (geo === "Flatland") {
-                Locations = [
+                locations = [
                     {lat:-39.272254, lng:-71.977628},
                     {lat:38.641185, lng: -83.744365},
                     {lat:42.416674, lng:-90.429017}];
 
             }
         }
-    }
-
-
-
-    if(clim === "Temperate" && geo === "Coastal" && pop === "Urban") {
-        locations = [
-            {lat: 47.5622, lng: 13.6493},
-            {lat: 40.811550, lng: -73.946477},
-            {lat: 40.811550, lng: -73.946477},
-            {lat: -31.563910, lng: 147.154312},
-            {lat: -33.718234, lng: 150.363181},
-            {lat: -33.727111, lng: 150.371124},
-            {lat: -33.848588, lng: 151.209834},
-            {lat: -33.851702, lng: 151.216968},
-            {lat: -34.671264, lng: 150.863657},
-            {lat: -35.304724, lng: 148.662905},
-            {lat: -36.817685, lng: 175.699196}
-        ];
     }
     initMap();
 }
