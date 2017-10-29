@@ -1,18 +1,19 @@
-var clim = "";
-var geo = "";
-var pop = "";
-
 function getPreferences() {
-    clim = document.getElementById("Q1");
-    geo = document.getElementById("Q2");
-    pop = document.getElementById("Q3");
-    if(clim === "Temperate" && geo === "Coastal" && pop === "urban") {
+    var clim = document.getElementById("Q1");
+    var geo = document.getElementById("Q2");
+    var pop = document.getElementById("Q3");
+    if(clim === "Temperate" && geo === "Coastal" && pop === "Urban") {
         var locations = [
-            {lat: 37.7749, lng: -122.4194}
+            {lat: 47.5622, lng: 13.6493}
         ];
     }
 }
-
+/*
+function getPreferences() {
+    var obj = document.getElementById("Q1");
+    document.getElementById("demo").innerHTML =
+    obj.options[obj.selectedIndex].text;
+}*/
 
 
 
