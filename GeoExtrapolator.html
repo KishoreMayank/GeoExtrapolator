@@ -44,6 +44,40 @@
     </form>
 </head>
 <body>
+  <script>
+    var getJSON = function(url, callback) {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+
+        xhr.onload = function() {
+
+            var status = xhr.status;
+
+            if (status == 200) {
+                callback(null, xhr.response);
+            } else {
+                callback(status);
+            }
+        };
+
+        xhr.send();
+    };
+
+    getJSON('http://api.wunderground.com/api/369cc744f82078db/almanac/q/CA/San_Francisco.json',  function(err, data) {
+        if (err != null) {
+            console.error(err);
+        } else {
+            var text = `Date: ${data.date}
+            Time: ${data.time}
+            Unix time: ${data.milliseconds_since_epoch}`
+            console.log(text);
+        }
+    });
+  </script>
+</body>
+<body>
     <div id="map"></div>
     <script src="script.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
@@ -54,5 +88,4 @@
     <meta charset="utf-8">
     <title>GeoExtrapolator</title>
 </div>
-
 </html>
