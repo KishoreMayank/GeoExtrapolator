@@ -1,0 +1,44 @@
+<html>
+  <header> Welcome to GeoLocater</header>
+    <subheader> Helping you find the best travel location based on your preferences</subheader>
+  <head>
+    <script
+        src = "GeoExtrapolator.js">
+    </script>
+      <div id="map"></div>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
+  </head>
+  <body>
+
+    <form>
+      <form>
+        <select id="What is your preferred Weather?">
+          <option>Sunny</option>
+          <option>Cloudy</option>
+          <option>Rainy</option>
+          <option>Snowy</option>
+          <option>Cold</option>
+          <option>Humid</option>
+        </select>
+        <br><br>
+      <form>
+      <form>
+        <select id="What geographic region do you live in?">
+          <option>Plains</option>
+          <option>Valley</option>
+          <option>Mountain</option>
+          <option>Coastal</option>
+          <option>Forest</option>
+          <option>Desert</option>
+        </select>
+        <br><br>
+      <form>
+      <input type="button" onclick="getPreferences()" value="Submit">
+    </form>
+  </body>
+</html>
