@@ -3,21 +3,16 @@ var geo = "";
 var pop = "";
 
 function getPreferences() {
-  clim = document.getElementById("Q1");
-  geo = document.getElementById("Q2");
-  pop = document.getElementById("Q3");
+    clim = document.getElementById("Q1");
+    geo = document.getElementById("Q2");
+    pop = document.getElementById("Q3");
+    if(clim === "Temperate" && geo === "Coastal" && pop === "urban") {
+        var locations = [
+            {lat: 37.7749, lng: -122.4194}
+        ];
+    }
 }
 
-var SanFrancisco = {
-    Climate: "Cloudy",
-    Geography: ["Coastal", "Valley"],
-    Population: "Urban",
-    Position:{lat: 37.7749, lng: -122.4194}
-};
-
-var locations = [
-  {lat: 37.7749, lng: -122.4194}
-];
 
 
 
