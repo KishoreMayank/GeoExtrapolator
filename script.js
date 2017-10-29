@@ -1,3 +1,15 @@
+var filename = "http://api.wunderground.com/api/369cc744f82078db/almanac/q/CA/San_Francisco.json;"
+
+var getData = function(filename) {
+    for (var i = 0; i <filename.length; i++) {
+        console.log(filename[i]);
+    }
+    return;
+};
+
+getData;
+
+
 function getPreferences() {
   document.getElementById("What is your preferred Weather?").submit();
   document.getElementById("What geographic region do you live in?").submit();
@@ -17,13 +29,11 @@ function initMap() {
   // Note: The code uses the JavaScript Array.prototype.map() method to
   // create an array of markers based on a given "locations" array.
   // The map() method here has nothing to do with the Google Maps API.
-    var createMarker = function(location, i) {
+    var markers = locations.map(function(location, i) {
         return new google.maps.Marker({
         position: location,
         label: labels[i % labels.length]
-    })};
-
-  var markers = locations.map(createMarker(Location, i));
+    })});
 
   // Add a marker clusterer to manage the markers.
   var markerCluster = new MarkerClusterer(map, markers,
@@ -55,3 +65,8 @@ var locations = [
   {lat: -42.735258, lng: 147.438000},
   {lat: -43.999792, lng: 170.463352}
 ]
+
+
+
+
+
