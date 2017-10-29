@@ -1,4 +1,3 @@
-
 function getPreferences() {
   document.getElementById("What is your preferred Weather?").submit();
   document.getElementById("What geographic region do you live in?").submit();
