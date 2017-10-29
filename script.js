@@ -1,8 +1,7 @@
 var clim= "";
 var geo = "";
 var pop = "";
-var locations = [];
-
+var locations =  [];
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -243,16 +242,11 @@ function getPreferences() {
     }
     if(locations === 5) {
         alert("Sorry, but weather like that just doesn't exist :(");
+    } else if (locations.length === 0){
+        alert("Please enter the remaining fields");
     } else {
         alert("Please look at the locations below");
     }
     initMap();
 }
-
-
-
-
-
-
-
 
