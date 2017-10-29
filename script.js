@@ -1,9 +1,15 @@
+var clim= "";
+var geo = "";
+var pop = "";
+var locations = [];
+
 function getPreferences() {
-    var clim = document.getElementById("Q1");
-    var geo = document.getElementById("Q2");
-    var pop = document.getElementById("Q3");
+    clim = document.getElementById("Q1");
+    geo = document.getElementById("Q2");
+    pop = document.getElementById("Q3");
+
     if(clim === "Temperate" && geo === "Coastal" && pop === "Urban") {
-        var locations = [
+        locations = [
             {lat: 47.5622, lng: 13.6493}
         ];
     }
