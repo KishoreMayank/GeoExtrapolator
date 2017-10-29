@@ -11,21 +11,53 @@ html, body {
 height: 85%;
 background-color: #00FF7F;
 font-family: 'Open Sans', sans-serif;
+background: url(top.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
-div{
-	color: black;
+.a{
+	color:white;
+	text-decoration: underline;	
+	border-style: solid;
+	display: inline-block;
+	padding: 7.5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border-width: 0px;
+	background-color: rgba(0,0,0,0.65);
 }
 
 .w3-wide {
-	color: black;
+	color: white;
 	border-style: solid;
 	font-family: 'Open Sans', sans-serif;
-	padding: 10px;
+	font-size: 100px;	
+	padding: 7.5px;
 	display: inline-block;
+	border:6px 
+	outset orange;
+	background-color: rgba(255,165,0,0.5);
 
 }
 .w3-opacity{
-	color:black;
-	text-decoration: underline;
+	color:white;
+	text-decoration: underline;	
+	border-style: solid;
+	display: inline-block;
+	padding: 7.5px;
+	border-width: 0px;
+	background-color: rgba(0,0,0,0.65);
+
+}
+
+.w3-justify{color:white;
+	text-decoration: underline;	
+	border-style: solid;
+	display: inline-block;
+	padding: 10px;
+	border-width: 0px;
+	background-color: rgba(0,0,0,0.65);
 }
