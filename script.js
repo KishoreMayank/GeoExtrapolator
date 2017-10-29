@@ -1,32 +1,3 @@
-/*
-var filename = "http://api.wunderground.com/api/369cc744f82078db/almanac/q/CA/San_Francisco.json;"
-console.log(filename);
-var getData = function(filename) {
-    for (var i = 0; i <filename.length; i++) {
-        console.log(filename[i]);
-    }
-    return;
-};
-
-getData;
-
-function insertReply(content) {
-    document.getElementById('output').innerHTML = content;
-}
-
-// create script element
-var script = document.createElement('script');
-// assing src with callback name
-script.src = 'http://api.wunderground.com/api/369cc744f82078db/almanac/q/CA/San_Francisco?callback=insertReply';
-// insert script to document and load content
-document.body.appendChild(script);*/
-
-var obj1 = {};
-
-jQuery.getJSON('http://api.wunderground.com/api/369cc744f82078db/almanac/q/CA/San_Francisco', obj1, console.log("hello"));
-
-
-
 function getPreferences() {
   document.getElementById("What is your preferred Weather?").submit();
   document.getElementById("What geographic region do you live in?").submit();
